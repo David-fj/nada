@@ -1,0 +1,18 @@
+Start
+Ola bem vindo
+Eae blz?
+1 - Andar pra direita
+2 - Andar pra esquerda
+@
+1 direita
+2 proxima-secao
+-
+
+direita
+vc seguiu o caminho da esquerda
+1 - Seguir reto
+2 - Voltar
+@
+1 reto
+2 Start
+-
