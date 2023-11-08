@@ -3,22 +3,31 @@
 #include <string.h>
 #include "coisas.h"
 
-int main() {
-    char secaoAtual[30] = "Start\n";
-    PLAYER * p = (PLAYER *)malloc(sizeof(PLAYER));
-    strcpy(p->name, "David");
-    p->hp = 10;
-    p->ep = 10;
-    p->dm = 10;
-    p->ca = 10;
-    p->lk = 10;
-    p->lv = 10;
-    p->xp = 10;
-
-    while(1){
-        imprimirSecao(secaoAtual);
+int menu(){
+    int choice;
+    while(choice < 1 && choice > 3){
+        system("cls");
+        printf("----------------\n");
+        printf("1-CARREGAR\n");
+        printf("2-NOVO JOGO\n");
+        printf("3-SAIR\n");
+        printf("----------------\n");
+        scanf("%d", &choice);
     }
+    return choice;
+}
 
-    save(p);
+int main() {
+
+    switch (menu()){
+        case 1:
+        case 2:
+            PLAYER * p = (PLAYER *)malloc(sizeof(PLAYER));
+            printf("Como se chama? ");
+            scanf("%s", p->name);
+            classSelect(p);
+        case 3:
+    }
+    
     return 1;
 }

@@ -4,7 +4,7 @@
 #include "coisas.h"
 
 void imprimirSecao(char* secao){
-    FILE * f = fopen("C:/Users/Diego/Desktop/nada/historia.txt", "r");
+    FILE * f = fopen("historia.txt", "r");
     if(f == NULL){
         printf("historia.txt, not find\n");
         exit(1);
@@ -47,13 +47,48 @@ void imprimirSecao(char* secao){
 }
 
 void save(PLAYER * p){
-    FILE * f = fopen("C:/Users/Diego/Desktop/nada/save.txt", "w");
+    FILE * f = fopen("save.txt", "w");
     if(f == NULL){
         printf("save.txt, not find\n");
         exit(1);
     }
     
     fprintf(f, "%s %d %d %d %d %d %d %d", p->name, p->hp, p->ep, p->dm, p->ca, p->lk, p->lv, p->lv);
+
+    fclose(f);
+}
+
+void classSelect(PLAYER * p){
+    printf("Ola %s, selecione a sua classe.\n", p->name);
+    FILE * f = fopen("classes.txt", "r");
+    
+    char linha[100];
+    int exibir = 1;
+    char class;
+
+    while(fgets(linha, 100, f) != NULL){
+
+        if(linha[0] == '@'){
+            exibir = 0;
+            scanf(" %c", &class);
+            fgets(linha, 100, f);
+        }
+
+        if(exibir)
+            printf("%s", linha);
+        else {
+
+            if(linha[0] == '#' && class == 1)
+                break;
+            else if(linha[0] && class != 1)
+                rewind(f);
+
+            if(linha[0] == class)
+                exibir = 1;
+        }
+
+    }
+
 
     fclose(f);
 }

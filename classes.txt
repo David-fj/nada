@@ -1,0 +1,30 @@
+------------------
+1. Guerreiro
+2. Paladino
+3. Cadador
+4. Ladino
+5. Clerigo
+6. Mago
+------------------
+@
+1
+
+Continuar com essa classe?
+
+1-Sim
+2-Nao
+@
+#
+1 2 3
+
+-
+2
+-
+3
+-
+4
+-
+5
+-
+6
+-

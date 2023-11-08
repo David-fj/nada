@@ -3,6 +3,9 @@
 
 typedef struct {
     char name[30];
+    int constituicao;
+    int sentidos;
+    int intelecto;
     int hp;
     int ep;
     int dm;
@@ -15,5 +18,7 @@ typedef struct {
 void imprimirSecao(char* secao);
 
 void save(PLAYER * p);
+
+void classSelect(PLAYER * p);
 
 #endif

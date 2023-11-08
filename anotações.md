@@ -105,9 +105,11 @@ Atributo referente a força da mente.
 
 #### Caçador
 
-*Foco *
+*Foco em iniciativa, dano alto, skills funcionais. Eficiente para burstar.*
 
 #### Ladino
+
+
 
 #### Clerigo
 
@@ -134,3 +136,9 @@ Atributo referente a força da mente.
 ## Itens
 
 ## Batalha
+
+__Compilar código:__
+
+``` c
+gcc -o meu_programa main.c coisas.c
+```
