@@ -3,6 +3,24 @@
 #include <stdlib.h>
 #include "coisas.h"
 
+// MENU
+
+int menu(){
+    int choice = 0;
+    while(choice < 1 || choice > 3){
+        system("cls");
+        printf("----------------\n");
+        printf("1-CARREGAR\n");
+        printf("2-NOVO JOGO\n");
+        printf("3-SAIR\n");
+        printf("----------------\n");
+        scanf("%d", &choice);
+    }
+    return choice;
+}
+
+// HISTORIA
+
 void imprimirSecao(char* secao){
     FILE * f = fopen("historia.txt", "r");
     if(f == NULL){
@@ -46,6 +64,8 @@ void imprimirSecao(char* secao){
     fclose(f);
 }
 
+// PLAYER
+
 void save(PLAYER * p){
     FILE * f = fopen("save.txt", "w");
     if(f == NULL){
@@ -56,6 +76,10 @@ void save(PLAYER * p){
     fprintf(f, "%s %d %d %d %d %d %d %d", p->name, p->hp, p->ep, p->dm, p->ca, p->lk, p->lv, p->lv);
 
     fclose(f);
+}
+
+void attStatus(PLAYER * p){
+    printf("oi");
 }
 
 void classSelect(PLAYER * p){
