@@ -71,24 +71,26 @@ void classSelect(PLAYER * p){
         if(linha[0] == '@'){
             exibir = 0;
             scanf(" %c", &class);
-            fgets(linha, 100, f);
         }
 
         if(exibir)
             printf("%s", linha);
         else {
 
-            if(linha[0] == '#' && class == 1)
+            if(linha[0] == '#' && class == '1'){
+                fscanf(f, "%d %d %d", &p->constituicao, &p->sentidos, &p->intelecto);
                 break;
-            else if(linha[0] && class != 1)
+            }
+            else if(linha[0] && class != '1'){
+                exibir = 1;
                 rewind(f);
+            }
 
             if(linha[0] == class)
                 exibir = 1;
         }
 
     }
-
 
     fclose(f);
 }

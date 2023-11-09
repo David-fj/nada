@@ -98,22 +98,74 @@ Atributo referente a força da mente.
 
 *Foco em combate, alta resistencia, dano moderado. Eficiente para combates de longa duração.*
 
+**Atributos**
+
+* Constituição
+    * 3
+* Sentidos
+    * 2
+* Intelecto
+    * 1
 
 #### Paladino
 
 *Foco em utilidade, alta resistencia (não tão alta quanto a do **guerreiro**), dano moderado, skills de utilidade. Eficiente para combates.*
 
+**Atributos**
+
+* Constituição
+    * 3
+* Sentidos
+    * 1
+* Intelecto
+    * 2
+
+
 #### Caçador
 
 *Foco em iniciativa, dano alto, skills funcionais. Eficiente para burstar.*
 
+**Atributos**
+
+* Constituição
+    * 2
+* Sentidos
+    * 3
+* Intelecto
+    * 1
+
 #### Ladino
 
+**Atributos**
 
+* Constituição
+    * 1
+* Sentidos
+    * 4
+* Intelecto
+    * 1
 
 #### Clerigo
 
+**Atributos**
+
+* Constituição
+    * 2
+* Sentidos
+    * 1
+* Intelecto
+    * 3
+
 #### Mago
+
+**Atributos**
+
+* Constituição
+    * 1
+* Sentidos
+    * 1
+* Intelecto
+    * 4
 
 ### Skills
 

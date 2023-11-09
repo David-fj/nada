@@ -4,8 +4,8 @@
 #include "coisas.h"
 
 int menu(){
-    int choice;
-    while(choice < 1 && choice > 3){
+    int choice = 0;
+    while(choice < 1 || choice > 3){
         system("cls");
         printf("----------------\n");
         printf("1-CARREGAR\n");
@@ -19,15 +19,17 @@ int menu(){
 
 int main() {
 
+    PLAYER * p = (PLAYER *)malloc(sizeof(PLAYER));
     switch (menu()){
-        case 1:
+        //case 1:
         case 2:
-            PLAYER * p = (PLAYER *)malloc(sizeof(PLAYER));
             printf("Como se chama? ");
             scanf("%s", p->name);
             classSelect(p);
-        case 3:
+            printf("%d %d %d\n", p->constituicao, p->sentidos, p->intelecto);
+        //case 3:
     }
-    
+    getc(stdin);
+    getc(stdin);
     return 1;
 }

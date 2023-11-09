@@ -8,14 +8,14 @@
 ------------------
 @
 1
+Foco em combate, alta resistencia, dano moderado. Eficiente para combates de longa duracao.
 
 Continuar com essa classe?
-
 1-Sim
 2-Nao
 @
 #
-1 2 3
+3 2 1
 
 -
 2
