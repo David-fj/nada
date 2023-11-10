@@ -79,7 +79,11 @@ void save(PLAYER * p){
 }
 
 void attStatus(PLAYER * p){
-    printf("oi");
+    p->hp = p->base.hp_base + (p->constituicao * 40) + (p->lv * 2);
+    p->ep = p->base.ep_base + (p->intelecto * 100) + (p->constituicao * 10) + (p->sentidos * 15);
+    p->dm = p->base.dm_base + (p->constituicao * 25) + (p->sentidos * 35);
+    p->ca = p->base.ca_base + (p->constituicao * 25) + (p->sentidos * 20);
+    p->lk = p->base.lk_base + (p->sentidos * 35) + p->lv;
 }
 
 void classSelect(PLAYER * p){
@@ -102,7 +106,8 @@ void classSelect(PLAYER * p){
         else {
 
             if(linha[0] == '#' && class == '1'){
-                fscanf(f, "%d %d %d", &p->constituicao, &p->sentidos, &p->intelecto);
+                fscanf(f, "%d %d %d %d %d %d %d %d %d %d", &p->constituicao, &p->sentidos, &p->intelecto, &p->base.hp_base, &p->base.ep_base, &p->base.dm_base, &p->base.ca_base, &p->base.lk_base, &p->lv, &p->xp);
+                p->xp_prox = 10;
                 break;
             }
             else if(linha[0] && class != '1'){

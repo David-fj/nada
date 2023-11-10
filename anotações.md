@@ -51,11 +51,34 @@ Acredito que assim, será um metodo mais eficiente.
 
 Base do sistema de Knights of Pen and Paper 2.
 
+### Status:
+
+* Vida (HP)
+* Energia (EP)
+* Dano (DM)
+* Armadura (CA)
+* Sorte (LK)
+* Nível (LV)
+* Experiencia (XP)
+
+**Formula para os status:**
+
+* *Vida*
+    * hp -> hp_base + (constituicao * 40) + (lv * 2)
+* *Energia*
+    * ep -> ep_base + (intelecto * 100) + (constituicao * 10) + (sentidos * 15)
+* *Dano*
+    * dm -> dm_base + (constituicao * 25) + (sentidos * 35)
+* *Armadura*
+    * ca -> ca_base + (constituicao * 25) + (sentidos * 20)
+* *Sorte*
+    * lk -> lk_base + (sentidos * 35) + lv
+
 ### Atributos
 
-1. Constituição
-2. Sentidos
-3. Intelecto
+* Constituição
+* Sentidos
+* Intelecto
 
 #### Constituição
 
@@ -169,23 +192,27 @@ Atributo referente a força da mente.
 
 ### Skills
 
-### Status:
+### Inventario, equipamento etc
 
-* Vida (HP)
-* Energia (EP)
-* Dano (DM)
-* Armadura (CA)
-* Sorte (LK)
-* Nível (LV)
-* Experiencia (XP)
+#### Slots
 
-#### VIDA (HP)
-
-
+Tera um total de slots, e esses slots serão divididos em 3 tipos: **arma, armadura e acessorio**
+Terá uma estrutura, pilha, para controlar a quantidade de slots.
+Exemplo:
+```
+Arma -> slot da arma      |           Arma
+|  |                      |           |  |
+|  |                      |           |{}|
+|__|                      |           |[]|  -> ITEM 
+ P   -> PILHA             |            P
+```
+Cada item ocupara um determinado espaço na pilha de slots. O jogador so podera equipar um item em seu respectivo slot.
 
 ## Monstros
 
 ## Itens
+
+
 
 ## Batalha
 
