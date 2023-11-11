@@ -26,6 +26,8 @@ typedef struct {
     int xp_prox;
 }PLAYER;
 
+
+
 int menu();
 
 void imprimirSecao(char* secao);

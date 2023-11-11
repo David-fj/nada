@@ -196,7 +196,7 @@ Atributo referente a força da mente.
 
 #### Slots
 
-Tera um total de slots, e esses slots serão divididos em 3 tipos: **arma, armadura e acessorio**
+Tera um total de slots, e esses slots serão divididos em 3 tipos: **arma, armadura e acessorio**.
 Terá uma estrutura, pilha, para controlar a quantidade de slots.
 Exemplo:
 ```
@@ -212,7 +212,38 @@ Cada item ocupara um determinado espaço na pilha de slots. O jogador so podera 
 
 ## Itens
 
+Todos os itens do jogo estarão em uma estrutura de dados, fila, que ira conter uma fila de todos os itens.
 
+As informações de cada item, status e etc, serão mantidas em um arquivo .txt chamado **itens.txt**.
+
+### Informação do item
+
+Todo item contera essas caracteristicas:
+
+```
+sword {
+    nome
+    tipo
+    valor
+    especificação
+}
+```
+
+O **tipo** dos itens é basicamente um metodo que serve para informar o que aquele item vai fazer, por exemplo:
+
+Eu posso dizer que a *sword* é do tipo 1, porque este tipo ira indicar itens que do tipo *arma*.
+
+O **tipo**, não sera o bastante para dizer aonde o **valor** ira, por isso tem a **especificação**. Por exemplo:
+
+A *sword* é do tipo 1, que é uma arma, porem eu não em que atributo ou status, ela ira modificar. Por isso, tem a **especificação** que ira dizer aonde o **valor** ira.
+
+* **Tipos dos itens**
+    ``` c
+    *   Arma       => 1
+    *   Armadura   => 2
+    *   Acessorio  => 3
+    *   Utilizavel => 4
+    ```
 
 ## Batalha
 
